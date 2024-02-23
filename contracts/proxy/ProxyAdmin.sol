@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.8.3) (proxy/transparent/TransparentUpgradeableProxy.sol)
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "./ERC1967Proxy.sol";
 
@@ -55,7 +55,7 @@ interface ITransparentUpgradeableProxy is IERC1967 {
  * and the functions declared in {ITransparentUpgradeableProxy} will be resolved in favor of the new one. This could
  * render the admin operations inaccessible, which could prevent upgradeability. Transparency may also be compromised.
  */
-contract TransparentUpgradeableProxy is ERC1967Proxy {
+contract ProxyAdmin is ERC1967Proxy {
     /**
      * @dev Initializes an upgradeable proxy managed by `_admin`, backed by the implementation at `_logic`, and
      * optionally initialized with `_data` as explained in {ERC1967Proxy-constructor}.

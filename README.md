@@ -39,7 +39,7 @@ npm run verify:sepolia
 ```
 
 Do not worry if you see error messages during the verification,those errors
-messages show up because the contracts have beed preoviously verified, sometimes
+messages show up because the contracts have beed previously verified, sometimes
 etherscan recognizes that the code is similar to another contract and
 automatically verifies them.
 

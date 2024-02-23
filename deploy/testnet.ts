@@ -25,10 +25,10 @@ export default async function deployToGoerli(hardhat: HardhatRuntimeEnvironment)
   const preMarket: Contract = await deployAndVerify(
     "PreMarket",
     [
-      process.env.ASX_NAME?.trim() || "Flare Governance Token",
-      process.env.ASX_SYMBOL?.trim() || "ASX",
-      BigInt(process.env.ASX_CAP?.trim() || ethers.parseEther("100000000")),
-      process.env.ASX_INITIAL_SUPPLY_RECEIVER?.trim() || deployer,
+      process.env.FPX_NAME?.trim() || "Flare Governance Token",
+      process.env.FPX_SYMBOL?.trim() || "ASX",
+      BigInt(process.env.FPX_CAP?.trim() || ethers.parseEther("100000000")),
+      process.env.FPX_INITIAL_SUPPLY_RECEIVER?.trim() || deployer,
     ],
     false
   );

@@ -228,15 +228,16 @@ contract PreMarket is
         PreMarketStorage storage $ = _getOwnStorage();
         Token storage _token = $.tokens[tokenId];
         uint8 fromStatus = _token.status;
-        uint8 toStatus = fromStatus == STATUS_TOKEN_ACTIVE
-            ? STATUS_TOKEN_INACTIVE
-            : STATUS_TOKEN_ACTIVE;
 
         require(
             fromStatus == STATUS_TOKEN_ACTIVE ||
                 fromStatus == STATUS_TOKEN_INACTIVE,
             "Cannot Change Token Status"
         );
+
+        uint8 toStatus = fromStatus == STATUS_TOKEN_ACTIVE
+            ? STATUS_TOKEN_INACTIVE
+            : STATUS_TOKEN_ACTIVE;
 
         _token.status = toStatus;
         emit UpdateTokenStatus(tokenId, fromStatus, toStatus);

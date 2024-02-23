@@ -31,6 +31,8 @@
     "coverage": "rm -rf coverage coverage.json cache && npx hardhat coverage"
   },
   "devDependencies": {
+    "@chainlink/contracts": "0.6.1",
+    "@chainlink/test-helpers": "0.0.7-alpha",
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.4",
